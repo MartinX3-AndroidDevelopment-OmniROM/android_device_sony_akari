@@ -12,5 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_akari.mk
+# Inherit device parts
+$(call inherit-product, device/sony/akari/aosp_h8216.mk)
 
+# Override Product Name
+PRODUCT_NAME := omni_akari
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := akari
